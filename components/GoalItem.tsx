@@ -9,7 +9,7 @@ const GoalItem: React.FC<GoalItemType> = ({ itemData, onDel }) => {
 	return (
 		<View style={styles.goals}>
 			<Pressable
-				android_ripple={{ color: '#1cd98d' }}
+				android_ripple={{ color: '#a31cd9' }}
 				onPress={() => onDel(itemData.item.id)}
 				style={({ pressed }) => pressed && styles.pressedItem}
 			>
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
 		borderWidth: 1,
 		borderColor: '#cccccc',
 		borderRadius: 5,
-		backgroundColor: '#015433',
+		backgroundColor: '#ba83c9',
 	},
 	goal: {
 		fontSize: 18,
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
 		borderRadius: 5,
 	},
 	pressedItem: {
-		backgroundColor: '#1cd98d',
+		backgroundColor: '#a31cd9',
 		opacity: 0.5,
 	},
 });
