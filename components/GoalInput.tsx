@@ -5,6 +5,7 @@ import {
 	TextInput,
 	View,
 	Modal,
+	Image,
 } from 'react-native';
 import React, { useState } from 'react';
 
@@ -35,6 +36,10 @@ const GoalInput: React.FC<GoalInputType> = ({
 			animationType='slide'
 		>
 			<View style={styles.inputContainer}>
+				<Image
+					style={styles.imageStyle}
+					source={require('../assets/images/goal.png')}
+				/>
 				<TextInput
 					value={enteredText}
 					style={styles.textInput}
@@ -46,7 +51,7 @@ const GoalInput: React.FC<GoalInputType> = ({
 						<Button
 							onPress={addGoalHandler}
 							title='Add a goal'
-							color='#015433'
+							color='#1a9d68'
 						/>
 					</View>
 					<View style={styles.btn}>
@@ -74,16 +79,19 @@ const styles = StyleSheet.create({
 		borderBottomWidth: 1,
 		borderColor: '#cccccc',
 		flex: 1,
+		backgroundColor: '#311b6b',
 		// gap: 2,
 	},
 	textInput: {
 		borderWidth: 1,
-		borderColor: '#cccccc',
+		borderColor: '#e4c0ff',
 		width: '70%',
-		padding: 10,
+		padding: 18,
 		borderRadius: 4,
 		marginRight: 8,
 		fontSize: 16,
+		color: '#000000',
+		backgroundColor: '#d2c7ef',
 	},
 	buttonGroup: {
 		flexDirection: 'row',
@@ -94,5 +102,9 @@ const styles = StyleSheet.create({
 	},
 	btn: {
 		width: '40%',
+	},
+	imageStyle: {
+		width: 200,
+		height: 200,
 	},
 });
