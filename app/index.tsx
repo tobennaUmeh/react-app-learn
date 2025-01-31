@@ -8,6 +8,7 @@ import {
 import React, { useState } from 'react';
 import GoalItem from '@/components/GoalItem';
 import GoalInput from '@/components/GoalInput';
+import { StatusBar } from 'expo-status-bar';
 
 const index = () => {
 	type Goal = { id: string; value: string };
@@ -35,35 +36,38 @@ const index = () => {
 	};
 
 	return (
-		<View style={styles.container}>
-			<Button
-				title='Add a goal'
-				color='#015433'
-				onPress={() => setIsModalOpen(true)}
-			/>
-			{isModalOpen && (
-				<GoalInput
-					addGoal={addGoalHandler}
-					closeModal={closeModal}
-					isModalOpen={isModalOpen}
+		<>
+			<StatusBar style='dark' />
+			<View style={styles.container}>
+				<Button
+					title='Add a goal'
+					color='#310154'
+					onPress={() => setIsModalOpen(true)}
 				/>
-			)}
-			<View style={styles.goalContainer}>
-				<Text style={{ fontSize: 25 }}>List of goals</Text>
-				<View style={styles.goalsView}>
-					<FlatList
-						data={arr}
-						keyExtractor={(item) => item.id}
-						renderItem={(itemData) => (
-							<GoalItem
-								itemData={itemData}
-								onDel={delGoalHandler}
-							/>
-						)}
+				{isModalOpen && (
+					<GoalInput
+						addGoal={addGoalHandler}
+						closeModal={closeModal}
+						isModalOpen={isModalOpen}
 					/>
+				)}
+				<View style={styles.goalContainer}>
+					<Text style={{ fontSize: 25 }}>List of goals</Text>
+					<View style={styles.goalsView}>
+						<FlatList
+							data={arr}
+							keyExtractor={(item) => item.id}
+							renderItem={(itemData) => (
+								<GoalItem
+									itemData={itemData}
+									onDel={delGoalHandler}
+								/>
+							)}
+						/>
+					</View>
 				</View>
 			</View>
-		</View>
+		</>
 	);
 };
 
@@ -72,11 +76,11 @@ export default index;
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#fff',
 		paddingTop: 10,
 		paddingHorizontal: 16,
 		// alignItems: 'center',
 		// justifyContent: 'center',
+		// backgroundColor: '#311b6b',
 		gap: 16,
 	},
 	button: {
