@@ -3,10 +3,9 @@
 		"name": "react-app-learn",
 		"slug": "react-app-learn",
 		"version": "1.0.0",
-		"orientation": "portrait",
+		"orientation": "automatic",
 		"icon": "./assets/images/goal.png",
 		"scheme": "myapp",
-		"backgroundColor": "#311b6b",
 		"userInterfaceStyle": "automatic",
 		"newArchEnabled": true,
 		"ios": {
@@ -14,8 +13,7 @@
 		},
 		"android": {
 			"adaptiveIcon": {
-				"foregroundImage": "./assets/images/adaptive-icon.png",
-				"backgroundColor": "#311b6b"
+				"foregroundImage": "./assets/images/adaptive-icon.png"
 			}
 		},
 		"web": {
