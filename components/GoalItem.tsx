@@ -1,5 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
+import { Colors } from '@/utils/colors';
 
 type GoalItemType = {
 	itemData: { item: { id: string; value: string } };
@@ -9,7 +10,7 @@ const GoalItem: React.FC<GoalItemType> = ({ itemData, onDel }) => {
 	return (
 		<View style={styles.goals}>
 			<Pressable
-				android_ripple={{ color: '#a31cd9' }}
+				android_ripple={{ color: Colors.backgroundPurple200 }}
 				onPress={() => onDel(itemData.item.id)}
 				style={({ pressed }) => pressed && styles.pressedItem}
 			>
@@ -24,9 +25,9 @@ export default GoalItem;
 const styles = StyleSheet.create({
 	goals: {
 		borderWidth: 1,
-		borderColor: '#cccccc',
+		borderColor: Colors.bordercolor100,
 		borderRadius: 5,
-		backgroundColor: '#ba83c9',
+		backgroundColor: Colors.backgroundPurple100,
 	},
 	goal: {
 		fontSize: 18,
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
 		borderRadius: 5,
 	},
 	pressedItem: {
-		backgroundColor: '#a31cd9',
+		backgroundColor: Colors.backgroundPurple200,
 		opacity: 0.5,
 	},
 });
