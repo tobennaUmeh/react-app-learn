@@ -8,6 +8,7 @@ import {
 	Image,
 } from 'react-native';
 import React, { useState } from 'react';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 interface GoalInputType {
 	addGoal: (enteredText: string) => void;
@@ -77,21 +78,21 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		paddingBottom: 5,
 		borderBottomWidth: 1,
-		borderColor: '#cccccc',
+		borderColor: Colors.bordercolor100,
 		flex: 1,
-		backgroundColor: '#311b6b',
+		backgroundColor: Colors.backgroundblue200,
 		// gap: 2,
 	},
 	textInput: {
 		borderWidth: 1,
-		borderColor: '#e4c0ff',
+		borderColor: Colors.textInputBorder,
 		width: '70%',
 		padding: 18,
 		borderRadius: 4,
 		marginRight: 8,
 		fontSize: 16,
 		color: '#000000',
-		backgroundColor: '#d2c7ef',
+		backgroundColor: Colors.background300,
 	},
 	buttonGroup: {
 		flexDirection: 'row',
